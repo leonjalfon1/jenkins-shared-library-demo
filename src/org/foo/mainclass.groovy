@@ -1,5 +1,6 @@
+@Library('my-shared-library')
+import static org.foo.helper
 package org.foo
-import static *
 
 class mainclass {
 static def mainfunction(script,prefix) {
