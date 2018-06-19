@@ -1,0 +1,1 @@
+The file txt give a description in the global variables reference
