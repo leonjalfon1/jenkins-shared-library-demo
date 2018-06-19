@@ -1,5 +1,5 @@
 package org.foo
-import static org.foo.helper.*
+import static helper.*
 
 class mainclass {
 static def mainfunction(script,prefix) {
