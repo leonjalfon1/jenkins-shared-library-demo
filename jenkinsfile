@@ -1,0 +1,26 @@
+@Library('my-shared-library') _
+
+pipeline{
+    agent { label "slave"}
+    stages{
+        stage ('Example'){
+        steps{
+            script{
+                log.info 'Starting...'
+                log.warning 'Nothing to do...'
+                
+                echo (libraryResource('org/foo/resource.json'))
+                sh (libraryResource('org/foo/resource.sh'))
+                callfunction()
+                callfunctionwithparam("My Parameter Value")
+                functionfromsrc("variable")
+                complextest("My FUcking Message!")
+                
+                //def msg = "Hello World!"
+                //def datescript = new org.foo.Date()
+                //org.foo.Message(msg)
+            }
+        }
+    }
+    }
+}
